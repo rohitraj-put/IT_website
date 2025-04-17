@@ -36,7 +36,7 @@ const About = () => {
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">About TechVision</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">About Us</h2>
           <p className="text-lg text-gray-600">
             We are a team of passionate IT professionals dedicated to helping businesses harness the power of technology to achieve their goals.
           </p>
@@ -46,10 +46,10 @@ const About = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4 text-gray-900">Our Story</h3>
             <p className="text-gray-600 mb-6">
-              Founded in 2013, TechVision started as a small team of developers with a shared vision of making technology accessible and beneficial for businesses of all sizes. Over the years, we've grown into a comprehensive IT solutions provider with expertise across various domains.
+            Trusted by the world's best organizations, for 12 years and running, it has been delivering smiles to hundreds of IT advisors, developers, users, and business owners. Easy solutions for all difficult IT problems to ensure high availability.
             </p>
             <p className="text-gray-600 mb-6">
-              Our journey has been marked by continuous learning, innovation, and a relentless focus on delivering exceptional value to our clients. Today, we're proud to be a trusted technology partner for businesses across industries.
+            Our biggest strength is our Global Reach. Our ability to cater to any business segments & needs. Our experience enables us create unique products. High volume of our work makes us provide value added services with wallet friendly charges. Strong ground support and extensive network keeps us always a step a head. We are always on Toes and this attitude has given us a strong presence in Indian Subcontinent.
             </p>
             <div className="flex gap-4">
               <Button className="bg-tech-600 hover:bg-tech-700">Our Services</Button>
@@ -60,39 +60,24 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-tech-500/20 to-purple-500/20 rounded-xl transform rotate-3"></div>
             <div className="relative rounded-xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-gray-200 flex items-center justify-center">
-                <div className="text-center p-4">
-                  <p className="text-sm text-gray-500">Company Image Placeholder</p>
-                </div>
+                <img className='w-full h-full object-cover' src='https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169851.jpg?ga=GA1.1.1288044525.1744868686&semt=ais_hybrid&w=740' alt='image_About'/>
               </div>
             </div>
           </div>
         </div>
         
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 ">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center bg-gradient-to-br from-tech-200 to-purple-200 p-4">
               <div className="text-4xl font-bold text-tech-600 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
+              <div className="text-gray-600 font-bold">{stat.label}</div>
             </div>
           ))}
         </div>
         
         {/* Team */}
-        <div>
-          <h3 className="text-2xl font-bold mb-8 text-gray-900 text-center">Our Leadership Team</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900">{member.name}</h4>
-                <p className="text-gray-600">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+    
       </div>
     </section>
   );

@@ -35,18 +35,21 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-          <p className="text-lg text-gray-600">
+      <section className="py-20 bg-gradient-to-b from-tech-50 to-white dark:from-gray-900 dark:to-gray-800">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-tech-600 to-purple-600">
+            Get In Touch
+          </h1>
+          <p className="text-lg md:text-xl text-center max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
             Have a question or want to discuss how we can help your business? Reach out to us using the form below or contact information.
           </p>
         </div>
-        
+      </section>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-gradient-to-br from-tech-600 to-purple-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
@@ -57,7 +60,7 @@ const Contact = () => {
                   <p className="opacity-80">info@techvision.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
                   <Phone size={20} />
@@ -67,7 +70,7 @@ const Contact = () => {
                   <p className="opacity-80">+1 (555) 123-4567</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
                   <MapPin size={20} />
@@ -78,7 +81,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-12">
               <h4 className="text-lg font-semibold mb-4">Business Hours</h4>
               <div className="space-y-2 opacity-80">
@@ -87,7 +90,7 @@ const Contact = () => {
                 <p>Sunday: Closed</p>
               </div>
             </div>
-            
+
             <div className="mt-12 flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -111,15 +114,23 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          
-          <div>
+
+          <div className='bg-gradient-to-br  from-tech-200 to-purple-200 p-4 rounded-2xl'>
+            <div className='text-center my-8'>
+              <h3 className="text-2xl font-bold ">Contact Now</h3>
+              <p className="text-lg md:text-xl text-center max-w-3xl mx-auto text-gray-700 dark:text-gray-300 pt-4">
+                 Let’s connect and explore how we can help
+                you succeed in the digital world!
+              </p>
+
+            </div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                  <Input 
-                    id="name" 
-                    name="name" 
+                  <Input
+                    id="name"
+                    name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -128,9 +139,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                  <Input 
-                    id="email" 
-                    name="email" 
+                  <Input
+                    id="email"
+                    name="email"
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -139,12 +150,12 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                  <Input 
-                    id="phone" 
+                  <Input
+                    id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
@@ -153,8 +164,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
-                  <Input 
-                    id="company" 
+                  <Input
+                    id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
@@ -162,11 +173,11 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <Textarea 
-                  id="message" 
+                <Textarea
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -175,7 +186,7 @@ const Contact = () => {
                   rows={5}
                 />
               </div>
-              
+
               <div>
                 <Button type="submit" className="w-full bg-tech-600 hover:bg-tech-700">
                   Send Message
@@ -186,6 +197,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <iframe className='mt-12 h-[60vh] w-[96%] mx-auto rounded-xl' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.456662284163!2d77.32761047409221!3d28.58607408619146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5dc52dee9db%3A0xd61ade68320b6847!2z4KSo4KSu4KWN4KSw4KSk4KS-IOCkr-ClguCkqOCkv-CkteCksOCljeCkuOCksg!5e0!3m2!1shi!2sin!4v1744873748780!5m2!1shi!2sin" loading="lazy" ></iframe>
     </section>
   );
 };

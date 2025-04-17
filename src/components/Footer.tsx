@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-tech-400 to-purple-400 mb-4">TechVision</h2>
+          <img className='w-60 h-16 mb-4 bg-white p-2 rounded-lg' src='https://namratauniversal.com/img/mainlogo.png' alt='logo'/>
             <p className="mb-4 max-w-md">
               We provide innovative IT solutions that help businesses transform, grow, and succeed in the digital landscape.
             </p>
@@ -133,8 +133,8 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; 2025 TechVision. All rights reserved.</p>
-          <p className="mt-4 md:mt-0">Designed and Developed by TechVision Team</p>
+          <p>&copy; 2025 Namrata Universal. All rights reserved.</p>
+          <p className="mt-4 md:mt-0">Designed and Developed by Namrata Universal Team</p>
         </div>
       </div>
     </footer>

@@ -1,33 +1,136 @@
 
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import ClientCard from './ClientCard';
 
 const testimonials = [
   {
-    content: "TechVision transformed our business with their custom software solution. They understood our requirements perfectly and delivered a high-quality product that exceeded our expectations.",
+    content: "Namrata Universal transformed our business with their custom software solution. They understood our requirements perfectly and delivered a high-quality product that exceeded our expectations.",
     author: "John Smith",
     position: "CEO, Global Retail Solutions",
     rating: 5,
   },
   {
-    content: "Working with TechVision has been a game-changer for our company. Their team is highly skilled, responsive, and dedicated to delivering excellent results.",
+    content: "Working with Namrata Universal has been a game-changer for our company. Their team is highly skilled, responsive, and dedicated to delivering excellent results.",
     author: "Emily Johnson",
     position: "CTO, FinTech Innovations",
     rating: 5,
   },
   {
-    content: "The cybersecurity solutions implemented by TechVision have significantly enhanced our data protection capabilities. Their expertise in this domain is unmatched.",
+    content: "The cybersecurity solutions implemented by Namrata Universal have significantly enhanced our data protection capabilities. Their expertise in this domain is unmatched.",
     author: "Michael Brown",
     position: "IT Director, Healthcare Systems",
     rating: 5,
   },
   {
-    content: "TechVision's web development team created a beautiful and functional website that perfectly represents our brand. The project was delivered on time and within budget.",
+    content: "Namrata Universal's web development team created a beautiful and functional website that perfectly represents our brand. The project was delivered on time and within budget.",
     author: "Sarah Williams",
     position: "Marketing Head, Creative Industries",
     rating: 5,
   },
 ];
+
+const clientCards = [
+
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-8.jpg"
+  }
+  , {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-9.png"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-10.png"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-14.png"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-13.png"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-18.png"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-17.png"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-19.jpeg"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-20.jpg"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-22.png"
+  },
+  {
+      name: "SAP",
+      logo: "https://jingleholidaybazar.com/images/mainlogo.gif"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-25.jpeg"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-26.png"
+  },
+  {
+      name: "Google",
+      logo: "https://namratauniversal.com/img/client-16.png"
+  },
+  {
+      name: "LinkedIn",
+      logo: "https://namratauniversal.com/img/client-23.png"
+  },
+  {
+      name: "Yahoo",
+      logo: "https://namratauniversal.com/img/client-15.png"
+  },
+  {
+      name: "Amazon",
+      logo: "https://namratauniversal.com/img/client-5.jpg"
+  },
+  {
+      name: "Netflix",
+      logo: "https://namratauniversal.com/img/client-6.jpg"
+  },
+  {
+      name: "Mac OS",
+      logo: "https://namratauniversal.com/img/client-1.jpg"
+  },
+  , {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-21.png"
+  },
+  {
+      name: "Dell",
+      logo: "https://namratauniversal.com/img/client-2.jpg"
+  },
+  {
+      name: "HP",
+      logo: "https://namratauniversal.com/img/client-3.jpg"
+  },
+  {
+      name: "IBM",
+      logo: "https://namratauniversal.com/img/client-11.png"
+  },
+  {
+      name: "SAP",
+      logo: "https://namratauniversal.com/img/client-12.png"
+  }
+
+];
+
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -103,20 +206,10 @@ const Testimonials = () => {
           </div>
           
           {/* Client logos */}
-          <div className="mt-16">
-            <p className="text-center text-sm text-gray-500 mb-6">TRUSTED BY LEADING COMPANIES</p>
-            <div className="flex flex-wrap justify-center gap-8 opacity-70">
-              {[...Array(5)].map((_, index) => (
-                <div key={index} className="bg-white h-12 w-32 flex items-center justify-center rounded-md">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-400">Client Logo</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          
         </div>
       </div>
+      <ClientCard/>
     </section>
   );
 };

@@ -1,32 +1,43 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Code, BarChart2, Database } from 'lucide-react';
+import { Typewriter } from 'react-simple-typewriter'; // Import the typing animation library
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden pt-16">
+    <div className="relative overflow-hidden rounded-[50px]">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-tech-50 to-purple-50 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br  from-tech-200 to-purple-200 z-0"></div>
       
       {/* Decorative elements */}
       <div className="absolute top-20 right-0 w-72 h-72 rounded-full bg-gradient-to-r from-purple-300/30 to-tech-300/30 blur-3xl"></div>
       <div className="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-gradient-to-r from-tech-300/20 to-purple-300/20 blur-3xl"></div>
       
-      <div className="container mx-auto px-4 pt-24 pb-16 sm:pb-20 lg:pt-32 lg:pb-28 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/80 shadow-sm backdrop-blur-sm mb-8">
-            <span className="inline-block h-2 w-2 rounded-full bg-tech-500 animate-pulse mr-2"></span>
+      <div className="container mx-auto px-4 py-16 sm:pb-20 lg:pt-24 lg:pb-24 relative z-10 bg-[url(https://www.braintechnosys.com/wp-content/themes/braintechnosys/img/bannerbg.png)] bg-top ">
+        <div className="text-center max-w-4xl mx-auto ">
+          <div className="inline-flex items-center px-4 max-md:px-2 py-1.5 rounded-full bg-white/80 shadow-sm backdrop-blur-sm mb-8">
+            <span className="inline-block h-2 w-2 rounded-full bg-tech-500 animate-pulse mr-2 "></span>
             <span className="text-sm font-medium text-gray-800">
               Transforming businesses with cutting-edge technology
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl mb-4 lg:text-6xl font-bold tracking-tight text-gray-900 ">
             Innovative IT Solutions for the 
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-tech-600 to-purple-600"> Digital Age</span>
+            
           </h1>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-tech-600 to-purple-600 text-4xl md:text-5xl font-bold">
+            <Typewriter
+              words={['Digital Age', 'Modern World', 'Next Generation']}
+              loop={true}
+              cursor
+              cursorStyle="_"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </span>
           
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mt-4 mb-10 max-w-2xl mx-auto">
             We help businesses transform, grow, and succeed in the digital landscape with our comprehensive IT services and cutting-edge technology solutions.
           </p>
           
